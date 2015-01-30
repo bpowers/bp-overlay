@@ -46,7 +46,6 @@ src_configure() {
 		$(use_enable uxa)
 		$(use_enable udev)
 		$(use_enable xvmc)
-		--disable-dri3
 	)
 	xorg-2_src_configure
 }
