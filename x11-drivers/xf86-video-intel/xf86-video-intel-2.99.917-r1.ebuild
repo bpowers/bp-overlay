@@ -10,7 +10,7 @@ inherit linux-info xorg-2
 DESCRIPTION="X.Org driver for Intel cards"
 
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd -x86-fbsd"
-IUSE="debug +sna +udev uxa xvmc"
+IUSE="debug +sna +udev dri3 uxa xvmc"
 
 REQUIRED_USE="
 	|| ( sna uxa )
@@ -46,6 +46,7 @@ src_configure() {
 		$(use_enable uxa)
 		$(use_enable udev)
 		$(use_enable xvmc)
+		$(use_enable dri3)
 	)
 	xorg-2_src_configure
 }
